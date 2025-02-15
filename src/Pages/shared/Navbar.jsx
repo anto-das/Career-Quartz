@@ -4,8 +4,8 @@ import AuthContext from "../../context/AuthContext";
 import brandLogo from "../../../public/icons8-jobs-64.png";
 const Navbar = () => {
   const { user,signOutUser } = useContext(AuthContext);
-  const handleSignOut = () =>{
-    signOutUser()
+  const handleSignOut =  () =>{
+    signOutUser();
   }
     const links = <>
     <NavLink to={"/"}>
@@ -23,7 +23,7 @@ const Navbar = () => {
     <NavLink to={"/register"}>
       <button className="block md:hidden lg:hidden text-gray-600 text-[18px] font-md  hover:text-blue-500 my-2 hover:underline">Sign Up</button>
     </NavLink>
-    <NavLink to={"/SignIn"}>
+    <NavLink to={"/signIn"}>
       <button className="block md:hidden lg:hidden text-gray-600 text-[18px] font-md   hover:text-orange-500 hover:underline">Sign In</button>
     </NavLink>
     </>

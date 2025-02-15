@@ -3,17 +3,20 @@ import useAuth from "../../hooks/useAuth";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdDeleteForever } from "react-icons/md";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 
 const MyApplications = () => {
     const {user} = useAuth();
     const [jobs,setJobs] = useState([]);
+    const axiosSecure = useAxiosSecure();
     useEffect( () => {
-        fetch(`https://job-portal-server-liart-tau.vercel.app/job-applications?email=${user?.email}`)
-        .then(res => res.json())
-        .then(data => {
-            setJobs(data)
-        })
+        // axios.get(`https://job-portal-server-liart-tau.vercel.app/job-applications?email=${user?.email}`,{withCredentials:true})
+        // .then(res => setJobs(res.data));
+          axiosSecure.get(`job-applications?email=${user?.email}`)
+          .then(res => setJobs(res.data))
+        
+
     } ,[user?.email])
 
     const handleDelete = id =>{

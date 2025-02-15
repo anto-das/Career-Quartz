@@ -55,7 +55,7 @@ import ViewApplications from "../Pages/ViewApplications/ViewApplications";
             element:<Register></Register>
         },
         {
-          path:"/SignIn",
+          path:"/signIn",
           element:<SignIn></SignIn>
         }
       ]

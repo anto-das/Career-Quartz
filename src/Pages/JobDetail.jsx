@@ -8,7 +8,7 @@ const JobDetail = () => {
     const {_id,title,company,company_logo,description,requirements,location,salaryRange,category,jobType,responsibilities,hr_email,hr_name,applicationDeadline} = job;
     return (
         <div>
-            <div className="flex flex-col justify-center items-center bg-[#faf7ec] py-14">
+            <div className="flex flex-col justify-center items-center bg-[#cfeef9] py-14">
             <figure>
                 <img
                 className="w-16" 
